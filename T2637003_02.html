@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T2637003 | 国の紹介</title>
+<style>
+  :root{
+    --navy:#0e2c56;
+    --navy-deep:#0a1f3d;
+    --blue:#1c4f8f;
+    --sky:#f4f8fd;
+    --text:#1c2b40;
+    --muted:#5c6a7e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+    color:var(--text);
+    background:var(--sky);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  a{text-decoration:none;color:inherit;}
+
+  header{
+    background:var(--navy);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 32px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:0.5px;}
+  nav{display:flex;gap:28px;}
+  nav a{display:flex;align-items:center;gap:6px;font-size:0.95rem;padding:6px 4px;border-bottom:2px solid transparent;}
+  nav a.active{border-color:#fff;font-weight:700;}
+  nav a:hover{opacity:.85;}
+
+  main{flex:1;padding:50px 20px 30px;}
+
+  .section-title{
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--navy);
+    margin-bottom:8px;
+  }
+  .title-rule{
+    width:70px;height:3px;background:var(--blue);
+    margin:0 auto 36px;
+    border-radius:2px;
+  }
+
+  .content-wrap{
+    max-width:1000px;
+    margin:0 auto 30px;
+    display:flex;
+    gap:30px;
+    align-items:stretch;
+  }
+
+  .photo-card{
+    flex:1;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(14,44,86,.08);
+    border:1px solid #e7edf6;
+    display:flex;
+    flex-direction:column;
+  }
+  .photo-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+  }
+  .photo-caption{
+    padding:12px 16px;
+    font-size:0.85rem;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  .info-card{
+    flex:1;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(14,44,86,.08);
+    border:1px solid #e7edf6;
+    overflow:hidden;
+  }
+  .info-card h2{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    padding:14px;
+    font-size:1.1rem;
+    font-weight:800;
+  }
+  .info-row{
+    display:flex;
+    border-bottom:1px solid #eef2f8;
+  }
+  .info-row:last-child{border-bottom:none;}
+  .info-label{
+    flex:0 0 130px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#f6f9fd;
+    color:var(--navy);
+    font-weight:700;
+    font-size:0.88rem;
+    padding:13px 14px;
+  }
+  .info-value{
+    flex:1;
+    display:flex;
+    align-items:center;
+    padding:13px 16px;
+    color:var(--text);
+    font-size:0.9rem;
+    line-height:1.6;
+  }
+
+  .description{
+    max-width:1000px;
+    margin:0 auto 34px;
+    background:#eaf2fb;
+    border-radius:8px;
+    padding:22px 26px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .description .glob{font-size:1.4rem;line-height:1;}
+  .description p{color:var(--text);line-height:1.9;font-size:0.95rem;}
+
+  .back-wrap{text-align:center;margin-top:6px;}
+  .back-btn{
+    display:inline-block;
+    background:var(--navy);
+    color:#fff;
+    padding:11px 28px;
+    border-radius:6px;
+    font-weight:600;
+    font-size:0.92rem;
+    transition:background .2s;
+  }
+  .back-btn:hover{background:var(--blue);}
+
+  footer{
+    background:var(--navy-deep);
+    color:#c9d3e2;
+    text-align:center;
+    padding:16px;
+    font-size:0.82rem;
+  }
+
+  @media (max-width:800px){
+    .content-wrap{flex-direction:column;}
+    .info-row{flex-direction:column;}
+    .info-label{flex:none;}
+    header{flex-direction:column;gap:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>⛰</span> T2637003</div>
+  <nav>
+    <a href="T2637003.html">🏠 ホーム</a>
+    <a href="T2637003_01.html">👤 自己紹介</a>
+    <a href="T2637003_02.html" class="active">🇳🇵 国の紹介</a>
+    <a href="T2637003_03.html">⭐ 任意のページ</a>
+  </nav>
+</header>
+
+<main>
+  <div class="section-title">国の紹介</div>
+  <div class="title-rule"></div>
+
+  <div class="content-wrap">
+    <div class="photo-card">
+      <img src="https://images.unsplash.com/photo-1623268964161-a4d07243f8cc?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="ボダナート寺院">
+      <div class="photo-caption">ネパール・カトマンズの有名な仏教寺院「ボダナート」</div>
+    </div>
+
+    <div class="info-card">
+      <h2>ネパール (Nepal)</h2>
+      <div class="info-row">
+        <div class="info-label">📍 首都</div>
+        <div class="info-value">カトマンズ</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">👥 人口</div>
+        <div class="info-value">約3,000万人</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">📐 面積</div>
+        <div class="info-value">約14.7万平方キロメートル</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">💬 言語</div>
+        <div class="info-value">ネパール語</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">⛰ 有名なもの</div>
+        <div class="info-value">エベレスト、ヒマラヤ山脈</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🍽 食べ物</div>
+        <div class="info-value">ダルバート、モモ</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🚩 国旗</div>
+        <div class="info-value">世界で唯一、長方形ではない国旗です。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    <div class="glob">🌐</div>
+    <p>
+      ネパールは、美しい自然と豊かな文化を持つ国です。世界最高峰のエベレストがあり、多くの登山家や観光客が訪れます。また、親切な人々とおいしい食べ物も大きな魅力です。
+    </p>
+  </div>
+
+  <div class="back-wrap">
+    <a class="back-btn" href="T2637003.html">🏠 トップページへ戻る</a>
+  </div>
+</main>
+
+<footer>© 2026 Sujan Shrestha | 岩谷学園よこはまITビジネス専門学校</footer>
+
+</body>
+</html>

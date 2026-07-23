@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T2637003 | 自己紹介</title>
+<style>
+  :root{
+    --navy:#0e2c56;
+    --navy-deep:#0a1f3d;
+    --blue:#1c4f8f;
+    --sky:#f4f8fd;
+    --text:#1c2b40;
+    --muted:#5c6a7e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+    color:var(--text);
+    background:var(--sky);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  a{text-decoration:none;color:inherit;}
+
+  header{
+    background:var(--navy);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 32px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:0.5px;}
+  nav{display:flex;gap:28px;}
+  nav a{display:flex;align-items:center;gap:6px;font-size:0.95rem;padding:6px 4px;border-bottom:2px solid transparent;}
+  nav a.active{border-color:#fff;font-weight:700;}
+  nav a:hover{opacity:.85;}
+
+  main{flex:1;padding:50px 20px 30px;}
+
+  .section-title{
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--navy);
+    margin-bottom:8px;
+  }
+  .title-rule{
+    width:70px;height:3px;background:var(--blue);
+    margin:0 auto 40px;
+    border-radius:2px;
+  }
+
+  .profile-wrap{
+    max-width:920px;
+    margin:0 auto 40px;
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+  }
+
+  .profile-card{
+    flex:0 0 220px;
+    text-align:center;
+  }
+  .avatar{
+    width:170px;height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid var(--navy);
+    box-shadow:0 8px 24px rgba(14,44,86,.18);
+  }
+  .profile-card h2{
+    margin-top:18px;
+    font-size:1.3rem;
+    color:var(--navy);
+    font-weight:800;
+  }
+  .tag{
+    display:inline-block;
+    margin-top:10px;
+    background:var(--sky);
+    border:1px solid #c9dbf3;
+    color:var(--blue);
+    font-size:0.8rem;
+    font-weight:600;
+    padding:6px 14px;
+    border-radius:20px;
+  }
+
+  .info-table{
+    flex:1;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(14,44,86,.08);
+    overflow:hidden;
+    border:1px solid #e7edf6;
+  }
+  .info-row{
+    display:flex;
+    border-bottom:1px solid #eef2f8;
+  }
+  .info-row:last-child{border-bottom:none;}
+  .info-label{
+    flex:0 0 160px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#f6f9fd;
+    color:var(--navy);
+    font-weight:700;
+    font-size:0.92rem;
+    padding:16px 18px;
+  }
+  .info-value{
+    flex:1;
+    display:flex;
+    align-items:center;
+    padding:16px 20px;
+    color:var(--text);
+    font-size:0.95rem;
+    line-height:1.6;
+  }
+
+  .back-wrap{text-align:center;margin-top:6px;}
+  .back-btn{
+    display:inline-block;
+    background:var(--navy);
+    color:#fff;
+    padding:11px 28px;
+    border-radius:6px;
+    font-weight:600;
+    font-size:0.92rem;
+    transition:background .2s;
+  }
+  .back-btn:hover{background:var(--blue);}
+
+  footer{
+    background:var(--navy-deep);
+    color:#c9d3e2;
+    text-align:center;
+    padding:16px;
+    font-size:0.82rem;
+  }
+
+  @media (max-width:760px){
+    .profile-wrap{flex-direction:column;align-items:center;}
+    .info-row{flex-direction:column;}
+    .info-label{flex:none;}
+    header{flex-direction:column;gap:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>⛰</span> T2637003</div>
+  <nav>
+    <a href="T2637003.html">🏠 ホーム</a>
+    <a href="T2637003_01.html" class="active">👤 自己紹介</a>
+    <a href="T2637003_02.html">🇳🇵 国の紹介</a>
+    <a href="T2637003_03.html">⭐ 任意のページ</a>
+  </nav>
+</header>
+
+<main>
+  <div class="section-title">自己紹介</div>
+  <div class="title-rule"></div>
+
+  <div class="profile-wrap">
+    <div class="profile-card">
+      <img class="avatar" src="myphoto.JPG" alt="Sujan Shrestha">
+      <h2>Sujan Shrestha</h2>
+      <div class="tag">システムエンジニアを目指しています！</div>
+    </div>
+
+    <div class="info-table">
+      <div class="info-row">
+        <div class="info-label">🌐 出身国</div>
+        <div class="info-value">ネパール</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">📅 年齢</div>
+        <div class="info-value">20歳</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">⚽ 趣味</div>
+        <div class="info-value">サッカー、プログラミング、ゲーム</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🍜 好きな食べ物</div>
+        <div class="info-value">ラーメン</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">☕ 好きな飲み物</div>
+        <div class="info-value">コーヒー</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🎯 将来の夢</div>
+        <div class="info-value">日本でプログラマーになること。</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">💬 ひとこと</div>
+        <div class="info-value">毎日新しいことを学び、夢に向かって頑張っています！</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-wrap">
+    <a class="back-btn" href="T2637003.html">🏠 トップページへ戻る</a>
+  </div>
+</main>
+
+<footer>© 2026 Sujan Shrestha | 岩谷学園よこはまITビジネス専門学校</footer>
+
+</body>
+</html>

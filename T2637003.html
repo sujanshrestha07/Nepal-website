@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T2637003 | ようこそネパールへ</title>
+<style>
+  :root{
+    --navy:#0e2c56;
+    --navy-deep:#0a1f3d;
+    --blue:#1c4f8f;
+    --blue-light:#eaf2fb;
+    --sky:#f4f8fd;
+    --text:#1c2b40;
+    --muted:#5c6a7e;
+    --gold:#c9a44c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+    color:var(--text);
+    background:var(--sky);
+  }
+  a{text-decoration:none;color:inherit;}
+
+  /* Header */
+  header{
+    background:var(--navy);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 32px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:0.5px;}
+  .logo .mtn{font-size:1.3rem;}
+  nav{display:flex;gap:28px;}
+  nav a{display:flex;align-items:center;gap:6px;font-size:0.95rem;padding:6px 4px;border-bottom:2px solid transparent;transition:border-color .2s, opacity .2s;}
+  nav a:hover{opacity:.8;}
+  nav a.active{border-color:#fff;font-weight:700;}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    height:70vh;
+    min-height:440px;
+    background-image:linear-gradient(180deg, rgba(10,25,50,.15) 0%, rgba(8,18,38,.55) 70%, rgba(8,18,38,.75) 100%),
+      url('https://images.unsplash.com/photo-1668966780008-b7dae98f61f3?fm=jpg&q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center 65%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+  }
+  .hero-inner{padding:0 20px;}
+  .hero .eyebrow{
+    letter-spacing:6px;
+    font-size:0.85rem;
+    font-weight:600;
+    opacity:.9;
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:5rem;
+    font-weight:800;
+    letter-spacing:6px;
+    line-height:1;
+    margin-bottom:10px;
+    text-shadow:0 4px 18px rgba(0,0,0,.35);
+  }
+  .hero .subtitle{
+    letter-spacing:4px;
+    font-size:0.95rem;
+    font-weight:500;
+    opacity:.9;
+    margin-bottom:18px;
+  }
+  .divider-flags{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    opacity:.85;
+  }
+  .divider-flags .line{width:70px;height:1px;background:rgba(255,255,255,.6);}
+  .divider-flags .mark{font-size:1rem;}
+
+  /* Welcome section */
+  .welcome{
+    background:#fff;
+    max-width:1000px;
+    margin:-46px auto 48px;
+    position:relative;
+    border-radius:6px;
+    box-shadow:0 10px 30px rgba(14,44,86,.08);
+    padding:44px 40px 40px;
+    text-align:center;
+  }
+  .section-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    font-size:1.6rem;
+    font-weight:800;
+    color:var(--navy);
+    margin-bottom:20px;
+  }
+  .section-title .line{width:60px;height:1px;background:var(--blue);position:relative;}
+  .section-title .line::after{
+    content:"";
+    position:absolute;right:-4px;top:-3px;
+    width:7px;height:7px;border-radius:50%;background:var(--blue);
+  }
+  .section-title .line.left::after{left:-4px;right:auto;}
+  .welcome p{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:1.02rem;
+  }
+
+  /* Page list */
+  .pages{
+    max-width:1080px;
+    margin:0 auto 60px;
+    padding:0 20px;
+  }
+  .pages .section-title{margin-bottom:34px;}
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .card{
+    background:#fff;
+    border-radius:10px;
+    padding:34px 26px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(14,44,86,.07);
+    border:1px solid #e7edf6;
+  }
+  .card .icon{
+    width:64px;height:64px;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;
+    margin:0 auto 18px;
+    overflow:hidden;
+  }
+  .card .icon img{
+    width:100%;height:100%;
+    object-fit:cover;
+  }
+  .card:nth-child(3) .icon{background:var(--gold);}
+  .card h3{color:var(--blue);font-size:1.2rem;margin-bottom:12px;font-weight:800;}
+  .card p{color:var(--muted);font-size:0.92rem;line-height:1.75;min-height:80px;}
+  .card .btn{
+    display:inline-block;
+    margin-top:16px;
+    background:var(--navy);
+    color:#fff;
+    padding:9px 22px;
+    border-radius:5px;
+    font-size:0.88rem;
+    font-weight:600;
+    transition:background .2s;
+  }
+  .card .btn:hover{background:var(--blue);}
+
+  footer{
+    background:var(--navy-deep);
+    color:#c9d3e2;
+    text-align:center;
+    padding:18px;
+    font-size:0.82rem;
+  }
+
+  @media (max-width:900px){
+    .cards{grid-template-columns:1fr;}
+    .hero h1{font-size:3rem;letter-spacing:3px;}
+    nav{gap:14px;}
+    header{flex-direction:column;gap:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="mtn">⛰</span> T2637003</div>
+  <nav>
+    <a href="T2637003.html" class="active">🏠 ホーム</a>
+    <a href="T2637003_01.html">👤 自己紹介</a>
+    <a href="T2637003_02.html">🇳🇵 国の紹介</a>
+    <a href="T2637003_03.html">⭐ 任意のページ</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">WELCOME TO</div>
+    <h1>NEPAL</h1>
+    <div class="subtitle">THE LAND OF HIMALAYAS</div>
+    <div class="divider-flags"><span class="line"></span><span class="mark">❖</span><span class="line"></span></div>
+  </div>
+</div>
+
+
+
+
+<div class="welcome">
+  <div class="section-title"><span class="line left"></span>ようこそ！<span class="line"></span></div>
+  <p>
+    このホームページでは、私の自己紹介や出身国ネパールについて紹介しています。<br>
+    どうぞご覧ください！
+  </p>
+</div>
+
+<div class="pages">
+  <div class="section-title"><span class="line left"></span>ページ一覧<span class="line"></span></div>
+  <div class="cards">
+    <div class="card">
+      <div class="icon"><img src="myphoto.JPG" alt="Sujan Shrestha"></div>
+      <h3>自己紹介</h3>
+      <p>私のプロフィール、趣味、好きなこと、将来の夢などを紹介します。</p>
+      <a class="btn" href="T2637003_01.html">詳しく見る →</a>
+    </div>
+    <div class="card">
+      <div class="icon">🇳🇵</div>
+      <h3>国の紹介</h3>
+      <p>私の出身国ネパールの特徴、文化、食べ物、観光地などを紹介します。</p>
+      <a class="btn" href="T2637003_02.html">詳しく見る →</a>
+    </div>
+    <div class="card">
+      <div class="icon">⭐</div>
+      <h3>任意のページ</h3>
+      <p>私の好きなことや興味のあるテーマについて紹介するページです。</p>
+      <a class="btn" href="T2637003_03.html">詳しく見る →</a>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Sujan Shrestha | 岩谷学園よこはまITビジネス専門学校</footer>
+
+</body>
+</html>

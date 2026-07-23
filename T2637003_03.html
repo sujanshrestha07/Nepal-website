@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T2637003 | 任意のページ</title>
+<style>
+  :root{
+    --navy:#0e2c56;
+    --navy-deep:#0a1f3d;
+    --blue:#1c4f8f;
+    --sky:#f4f8fd;
+    --text:#1c2b40;
+    --muted:#5c6a7e;
+    --gold:#c9a44c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+    color:var(--text);
+    background:var(--sky);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  a{text-decoration:none;color:inherit;}
+
+  header{
+    background:var(--navy);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 32px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:0.5px;}
+  nav{display:flex;gap:24px;flex-wrap:wrap;}
+  nav a{display:flex;align-items:center;gap:6px;font-size:0.95rem;padding:6px 4px;border-bottom:2px solid transparent;}
+  nav a.active{border-color:#fff;font-weight:700;}
+  nav a:hover{opacity:.85;}
+
+  main{flex:1;padding:50px 20px 30px;}
+
+  .section-title{
+    text-align:center;
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--navy);
+    margin-bottom:8px;
+  }
+  .title-rule{
+    width:70px;height:3px;background:var(--gold);
+    margin:0 auto 14px;
+    border-radius:2px;
+  }
+  .intro{
+    max-width:700px;
+    margin:0 auto 40px;
+    text-align:center;
+    color:var(--muted);
+    line-height:1.9;
+    font-size:0.98rem;
+  }
+
+  .cards{
+    max-width:1080px;
+    margin:0 auto 40px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(14,44,86,.08);
+    border:1px solid #e7edf6;
+    display:flex;
+    flex-direction:column;
+  }
+  .card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+  }
+  .card-body{
+    padding:22px 22px 26px;
+    text-align:center;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .card-body .emoji{font-size:1.6rem;margin-bottom:8px;}
+  .card-body h3{color:var(--navy);font-size:1.15rem;font-weight:800;margin-bottom:10px;}
+  .card-body p{color:var(--muted);font-size:0.9rem;line-height:1.75;flex:1;}
+  .badge{
+    display:inline-block;
+    margin-top:14px;
+    align-self:center;
+    background:var(--sky);
+    border:1px solid #c9dbf3;
+    color:var(--blue);
+    font-size:0.78rem;
+    font-weight:600;
+    padding:5px 14px;
+    border-radius:20px;
+  }
+
+  .back-wrap{text-align:center;margin-top:10px;}
+  .back-btn{
+    display:inline-block;
+    background:var(--navy);
+    color:#fff;
+    padding:11px 28px;
+    border-radius:6px;
+    font-weight:600;
+    font-size:0.92rem;
+    transition:background .2s;
+  }
+  .back-btn:hover{background:var(--blue);}
+
+  footer{
+    background:var(--navy-deep);
+    color:#c9d3e2;
+    text-align:center;
+    padding:16px;
+    font-size:0.82rem;
+  }
+
+  @media (max-width:900px){
+    .cards{grid-template-columns:1fr;}
+    header{flex-direction:column;gap:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>⛰</span> T2637003</div>
+  <nav>
+    <a href="T2637003.html">🏠 ホーム</a>
+    <a href="T2637003_01.html">👤 自己紹介</a>
+    <a href="T2637003_02.html">🇳🇵 国の紹介</a>
+    <a href="T2637003_03.html" class="active">⭐ 任意のページ</a>
+  </nav>
+</header>
+
+<main>
+  <div class="section-title">好きなこと紹介</div>
+  <div class="title-rule"></div>
+  <p class="intro">
+    ここでは、私が普段の生活で楽しんでいること、興味を持っていることを紹介します。<br>
+    サッカー、プログラミング、ゲームが私の毎日の原動力です。
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506183478292-c7c59060a75b?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="サッカー">
+      <div class="card-body">
+        <div class="emoji">⚽</div>
+        <h3>サッカー</h3>
+        <p>小さい頃から続けている一番好きなスポーツです。週末は友人たちとフットサルをして体を動かし、リフレッシュしています。海外サッカーの試合を観るのも楽しみの一つです。</p>
+        <span class="badge">週末はフットサル</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="プログラミング">
+      <div class="card-body">
+        <div class="emoji">💻</div>
+        <h3>プログラミング</h3>
+        <p>専門学校で学んでいるシステムエンジニアの道につながる大切な趣味です。Webサイトや簡単なアプリを作りながら、新しい技術を学ぶ時間が一番楽しいです。</p>
+        <span class="badge">将来の夢につながる趣味</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1654557339705-d4250e03ea80?fm=jpg&q=80&w=800&auto=format&fit=crop" alt="ゲーム">
+      <div class="card-body">
+        <div class="emoji">🎮</div>
+        <h3>ゲーム</h3>
+        <p>勉強の合間の息抜きとしてゲームを楽しんでいます。友人とオンラインで対戦したり、一人でじっくりストーリーを進めたりするのが好きです。</p>
+        <span class="badge">友人とオンライン対戦</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-wrap">
+    <a class="back-btn" href="T2637003.html">🏠 トップページへ戻る</a>
+  </div>
+</main>
+
+<footer>© 2026 Sujan Shrestha | 岩谷学園よこはまITビジネス専門学校</footer>
+
+</body>
+</html>
